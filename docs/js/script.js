@@ -47,3 +47,9 @@ const createJokeContainer = (obj) => {
 
     pTag.innerHTML = obj.joke;
 }
+
+window.onload = () => {
+    setTimeout(() => {
+        btn.click();
+    }, 400);
+}
