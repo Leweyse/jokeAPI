@@ -2,9 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Text&display=swap');
 
 :root {
-    --clr-bg: hsl(49, 93%, 67%);
-    --clr-text: hsl(355, 73%, 54%);
-    --clr-accent: hsl(245, 9%, 27%);
+    --clr-bg: #f9dc5d;
+    --clr-text: #df3442;
+    --clr-accent: #1f1d2c;
 
     --ff-primary: 'Zilla Slab Highlight', cursive;
     --ff-secondary: 'Libre Barcode 39 Text', cursive;
