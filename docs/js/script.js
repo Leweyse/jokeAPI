@@ -11,9 +11,8 @@ const btn = document.getElementById('run');
 btn.addEventListener('click', () => {
     fetchData()
         .then(data => { 
-            if (data.joke.length > 192) {
-                btn.click();
-            } else {
+            if (data.joke.length > 192) btn.click();
+            else {
                 if (!container.hasChildNodes()) createJokeContainer(data);
                 else {
                     document.querySelector('strong').innerHTML = data.category;
@@ -39,17 +38,18 @@ const createJokeContainer = (obj) => {
     container.appendChild(asideTag);
     asideTag.appendChild(strongTag);
     asideTag.appendChild(emTag);
-
-    container.style.display = 'block';     
     
     strongTag.innerHTML = obj.category;
     emTag.innerHTML = "";
 
     pTag.innerHTML = obj.joke;
+
+    container.style.opacity = '0';
 }
 
 window.onload = () => {
+    btn.click();
     setTimeout(() => {
-        btn.click();
-    }, 600);
+        container.style.opacity = '1';
+    }, 400);
 }
