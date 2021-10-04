@@ -51,5 +51,5 @@ const createJokeContainer = (obj) => {
 window.onload = () => {
     setTimeout(() => {
         btn.click();
-    }, 400);
+    }, 600);
 }
