@@ -10,8 +10,8 @@
     --ff-secondary: 'Libre Barcode 39 Text', cursive;
 
     --fs-title: 3rem;
-    --fs-paragraph: 2rem;
-    --fs-subtitle: 1rem;
+    --fs-subtitle: 2rem;
+    --fs-paragrap: 1rem;
 }
 
 * {
@@ -108,5 +108,5 @@ button:focus {
 .container aside strong,
 .container aside em {
     color: var(--clr-text);
-    font-size: var(--fs-paragraph);
+    font-size: var(--fs-subtitle);
 }
