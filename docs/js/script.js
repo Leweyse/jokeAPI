@@ -17,11 +17,6 @@ const fetchData = async () => {
     return data;
 }
 
-bestJokes.map(elem => {
-    if (elem == data) saveIcon.setAttribute('src', like) 
-    else saveIcon.setAttribute('src', unlike)
-})
-
 btn.addEventListener('click', () => {
     fetchData()
         .then(data => { 
@@ -38,12 +33,12 @@ btn.addEventListener('click', () => {
 })
 
 save.addEventListener('click', () => {
-    bestJokes.push(document.querySelector('p').textContent);
+    bestJokes.push(document.querySelector('.joke').textContent);
     bestJokes = [...new Set(bestJokes)];
 
     setInterval(() => {
         bestJokes.map(elem => {
-            if (elem === document.querySelector('p').textContent) saveIcon.setAttribute('src', like);
+            if (elem === document.querySelector('.joke').textContent) saveIcon.setAttribute('src', like);
             else saveIcon.setAttribute('src', unlike);
         })
     }, 100);
